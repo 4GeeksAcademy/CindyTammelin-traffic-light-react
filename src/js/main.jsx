@@ -1,18 +1,22 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import TrafficLight from "./components/TrafficLight";
+import "../styles/index.css";
 
-//Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap"
+const App = () => {
 
-// index.css'
-import '../styles/index.css'
+    return (
+        <div className="app">
+            <h1>Semaforo con React</h1>
+            <TrafficLight />
+        </div>
+    );
+    
+};
 
-// components
-import Home from './components/Home';
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+const root = ReactDOM.createRoot(document.getElementById("app"));
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
